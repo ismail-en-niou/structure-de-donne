@@ -208,13 +208,10 @@ list_etd *student_position(list_etd *L , etudiant x){
     }else{
         return -1 ;
     }
-
-
 }
 int main(int argc, char const *argv[])
 {
     list_etd *L;
     L = NULL;
-
     return 0;
 }

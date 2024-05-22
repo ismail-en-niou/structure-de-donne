@@ -6,7 +6,7 @@ typedef struct
     int tete;
     int Queue;
     int taille ;
-    int T[50];
+    int *T;
 }file;
 int estVide( file f){
     return (f.tete == f.Queue);
@@ -26,6 +26,7 @@ int main(){
     f1.Queue = f1.tete = 0 ;
     printf("Donner la taille maximale de la file p1 : ");
     scanf("%d", &f1.taille);
+    f1.T = (int *)malloc(f1.taille * sizeof(int));
 
 
     while (!estplen(f1))
@@ -38,5 +39,6 @@ int main(){
     {
         printf("%d \n", DeFiler(&f1));
     }
+    free(f1.T);
     return 0 ;
 }
